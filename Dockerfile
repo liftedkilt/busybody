@@ -19,6 +19,6 @@ COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /etc/passwd /etc/passwd
 # Copy our static executable
 COPY --from=builder /opt/bin/busybody /opt/bin/busybody
-USER appuser
+USER busybody
 
 ENTRYPOINT ["/opt/bin/busybody"]
