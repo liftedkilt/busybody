@@ -9,7 +9,7 @@ COPY . /opt/busybody
 WORKDIR /opt/busybody
 
 #build the binary
-RUN GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags=”-w -s” -o /opt/bin/busybody
+RUN GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags="-w -s" -o /opt/bin/busybody
 
 
 # STEP 2 build a small image
